@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5">
+
+    <!-- Top Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="Mini Pinterest"
+        android:titleTextColor="@android:color/white" />
+
+    <!-- Scrollable main container (pins will be added here dynamically) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="List of user pins">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:elevation="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <!-- Home Button -->
+        <LinearLayout
+            android:id="@+id/nav_home"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:src="@drawable/ic_home"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Home" />
+
+            <TextView
+                android:text="Home"
+                android:textSize="12sp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Upload Button -->
+        <LinearLayout
+            android:id="@+id/nav_upload"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:src="@drawable/ic_add"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Upload" />
+
+            <TextView
+                android:text="Upload"
+                android:textSize="12sp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Profile Button -->
+        <LinearLayout
+            android:id="@+id/nav_profile"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:src="@drawable/ic_person"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Profile" />
+
+            <TextView
+                android:text="Profile"
+                android:textSize="12sp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
